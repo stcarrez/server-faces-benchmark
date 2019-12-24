@@ -1,0 +1,29 @@
+<!DOCTYPE facelet-taglib PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Facelet Taglib 1.0//EN"
+        "http://java.sun.com/dtd/facelet-taglib_1_0.dtd">
+
+<facelet-taglib>
+    <namespace>http://code.google.com/p/ada-asf/util</namespace>
+
+    <tag>
+        <tag-name>script</tag-name>
+        <component>
+            <component-type>org.ciceron.jsfbenchmark.ui.UIScript</component-type>
+        </component>
+    </tag>
+
+    <tag>
+        <tag-name>flush</tag-name>
+        <component>
+            <component-type>org.ciceron.jsfbenchmark.ui.UIFlush</component-type>
+        </component>
+    </tag>
+
+    <tag>
+        <tag-name>file</tag-name>
+        <component>
+            <component-type>org.ciceron.jsfbenchmark.ui.UIFile</component-type>
+        </component>
+    </tag>
+
+</facelet-taglib>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+    </application>
+
+    <component>
+        <component-type>org.ciceron.jsfbenchmark.ui.UIScript</component-type>
+        <component-class>org.ciceron.jsfbenchmark.ui.UIScript</component-class>
+    </component>
+
+    <component>
+        <component-type>org.ciceron.jsfbenchmark.ui.UIFlush</component-type>
+        <component-class>org.ciceron.jsfbenchmark.ui.UIFlush</component-class>
+    </component>
+
+    <component>
+        <component-type>org.ciceron.jsfbenchmark.ui.UIFile</component-type>
+        <component-class>org.ciceron.jsfbenchmark.ui.UIFile</component-class>
+    </component>
+
+    <component>
+        <component-type>org.ciceron.jsfbenchmark.ui.UIInclude</component-type>
+        <component-class>org.ciceron.jsfbenchmark.ui.UIInclude</component-class>
+    </component>
+
+      <managed-bean>
+        <managed-bean-name>testing</managed-bean-name>
+        <managed-bean-class>java.util.HashMap</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+      </managed-bean>
+
+      <managed-bean>
+        <managed-bean-name>jquery</managed-bean-name>
+        <managed-bean-class>java.util.HashMap</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+        <map-entries>
+            <key-class>java.lang.String</key-class>
+            <value-class>java.lang.String</value-class>
+            <map-entry>
+                <key>path</key>
+                <value>#{contextPath}/js/jquery-1.11.3.js</value>
+            </map-entry>
+            <map-entry>
+                <key>uiPath</key>
+                <value>#{contextPath}/js/jquery-ui-1.11.4/</value>
+            </map-entry>
+            <map-entry>
+                <key>chosenPath</key>
+                <value>#{contextPath}/js/jquery-chosen-1.4.2/chosen.jquery.js</value>
+            </map-entry>
+            <map-entry>
+                <key>uiCssPath</key>
+                <value>#{contextPath}/css/redmond/jquery-ui-1.11.4.css</value>
+            </map-entry>
+            <map-entry>
+                <key>chosenCssPath</key>
+                <value>#{contextPath}/css/jquery-chosen-1.4.2/chosen.css</value>
+            </map-entry>
+        </map-entries>
+    </managed-bean>
+
+</faces-config>
