@@ -1,6 +1,6 @@
 autom4te.cache
 Makefile.conf
-asfbenchs.gpr
+asfbench.gpr
 config.status
 *.log
 *~
