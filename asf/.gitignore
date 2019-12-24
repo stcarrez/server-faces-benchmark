@@ -1,0 +1,6 @@
+autom4te.cache
+Makefile.conf
+asfbenchs.gpr
+config.status
+*.log
+*~
