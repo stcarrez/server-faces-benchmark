@@ -39,7 +39,7 @@ procedure Asfbench.Server is
    procedure Configure (Config : in out AWS.Config.Object) is
    begin
       AWS.Config.Set.Input_Line_Size_Limit (1_000_000);
-      AWS.Config.Set.Max_Connection (Config, 2);
+      AWS.Config.Set.Max_Connection (Config, 8);
       AWS.Config.Set.Accept_Queue_Size (Config, 100);
       AWS.Config.Set.Send_Buffer_Size (Config, 128 * 1024);
       AWS.Config.Set.Upload_Size_Limit (Config, 100_000_000);
