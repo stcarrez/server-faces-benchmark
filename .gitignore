@@ -17,3 +17,7 @@ autom4te.cache
 *.gcov
 *.mat
 config.cache
+asf/bin
+asf/obj
+myfaces/target
+myfaces/.idea
