@@ -22,6 +22,10 @@ AC_DEFUN(AM_GNAT_CHECK_GPRBUILD,
     AC_CHECK_PROGS(GNATMAKE, gnatmake, "")
   fi
 
+  if test -z "$GNATMAKE"; then
+    AC_MSG_ERROR([gnatmake or gprbuild must be installed.])
+  fi;
+
   AC_CHECK_PROGS(GPRCLEAN, gprclean, "")
   if test -n "$GPRCLEAN"; then
     GNATCLEAN="$GPRCLEAN"
@@ -218,15 +222,27 @@ AC_DEFUN(AM_GNAT_FIND_ADA_WIKI,
 ])
 
 dnl Check for swaggerada GNAT project
-AC_DEFUN(AM_GNAT_FIND_ADA_SWAGGER,
+AC_DEFUN(AM_GNAT_FIND_ADA_OPENAPI,
 [
-  AM_GNAT_FIND_PROJECT([swagger-ada],[Swagger Ada Library],[swagger],
+  AM_GNAT_FIND_PROJECT([openapi-ada],[OpenAPI Ada Library],[swagger],
     [git@github.com:stcarrez/swagger-ada.git],
-    [Building $1 requires the Ada Swagger Library.],
+    [Building $1 requires the Ada OpenAPI Library.],
     [
       SWAGGER_DIR=${ac_cv_gnat_project_dir_swagger}
     ])
   AC_SUBST(SWAGGER_DIR)
+])
+
+dnl Check for swaggerada GNAT project
+AC_DEFUN(AM_GNAT_FIND_ADA_KEYSTORE,
+[
+  AM_GNAT_FIND_PROJECT([ada-keystore],[Ada Keystore Library],[keystoreada],
+    [git@github.com:stcarrez/ada-keystore.git],
+    [Building $1 requires the Ada Keystore Library.],
+    [
+      KEYSTOREADA_DIR=${ac_cv_gnat_project_dir_keystoreada}
+    ])
+  AC_SUBST(KEYSTOREADA_DIR)
 ])
 
 dnl Check for AWA GNAT project
